@@ -2,6 +2,8 @@ package library.service;
 
 import library.domain.Book;
 import library.domain.Reader;
+import library.exception.NullBookException;
+import library.exception.NullReaderException;
 
 import java.util.Date;
 import java.util.List;
@@ -27,13 +29,13 @@ public interface LibraryManager {
 
     public Map getListOfReaders();
     public Map getListOfAvailableBooks();
-    public Book addBooksToLibrary(Book book);
-    public Reader addReaderToLibrary(Reader reader);
-    public Book giveBook(Book book, Reader reader);
+    public Book addBooksToLibrary(Book book) throws NullBookException;
+    public Reader addReaderToLibrary(Reader reader) throws NullReaderException;
+    public Book giveBookToReader(Book book, Reader reader) throws NullReaderException, NullBookException;
     public Map getListOfTakenBooks();
-    public Map getReadersBooks(Reader reader);
-    public boolean addReaderToBlackList(Reader reader);
-    public List<Book> getBooksByAuthor();
+    public Map getReadersBooks(Reader reader) throws NullReaderException;
+    public boolean addReaderToBlackList(Reader reader) throws NullReaderException;
+    public List<Book> getBooksByAuthor(String authorName);
     public List<Book> getBooksByDate(Date start, Date finish);
 
 

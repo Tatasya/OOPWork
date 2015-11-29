@@ -8,49 +8,57 @@ import java.util.Map;
  */
 public class Library {
     private String name;
-    private Map mapOfReaders;
-    private Map mapOfBlackMarkReaders;
-    private Map mapOfAvailableBooks;
-    private Map mapOfTakenBooks;
+    private Map<Integer, Reader> listOfReaders;
+    private Map<Integer, Reader> listOfBlackMarkReaders;
+    private Map<Integer, Book> listOfAvailableBooks;
+    private Map<Integer, Book> listOfTakenBooks;
 
     public Library(String name) {
         this.name = name;
-        mapOfReaders = new HashMap();
-        mapOfBlackMarkReaders = new HashMap();
-        mapOfAvailableBooks = new HashMap();
-        mapOfTakenBooks = new HashMap();
+        listOfReaders = new HashMap();
+        listOfBlackMarkReaders = new HashMap();
+        listOfAvailableBooks = new HashMap();
+        listOfTakenBooks = new HashMap();
     }
 
-    public Map getMapOfReaders() {
-        return mapOfReaders;
+    public String getName() {
+        return name;
     }
 
-    public void setMapOfReaders(Map mapOfReaders) {
-        this.mapOfReaders = mapOfReaders;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Map getMapOfBlackMarkReaders() {
-        return mapOfBlackMarkReaders;
+    public Map getListOfTakenBooks() {
+        return listOfTakenBooks;
     }
 
-    public void setMapOfBlackMarkReaders(Map mapOfBlackMarkReaders) {
-        this.mapOfBlackMarkReaders = mapOfBlackMarkReaders;
+    public void setListOfTakenBooks(Map listOfTakenBooks) {
+        this.listOfTakenBooks = listOfTakenBooks;
     }
 
-    public Map getMapOfAvailableBooks() {
-        return mapOfAvailableBooks;
+    public Map getListOfBlackMarkReaders() {
+        return listOfBlackMarkReaders;
     }
 
-    public void setMapOfAvailableBooks(Map mapOfAvailableBooks) {
-        this.mapOfAvailableBooks = mapOfAvailableBooks;
+    public void setListOfBlackMarkReaders(Map listOfBlackMarkReaders) {
+        this.listOfBlackMarkReaders = listOfBlackMarkReaders;
     }
 
-    public Map getMapOfTakenBooks() {
-        return mapOfTakenBooks;
+    public Map getListOfReaders() {
+        return listOfReaders;
     }
 
-    public void setMapOfTakenBooks(Map mapOfTakenBooks) {
-        this.mapOfTakenBooks = mapOfTakenBooks;
+    public void setListOfReaders(Map listOfReaders) {
+        this.listOfReaders = listOfReaders;
+    }
+
+    public Map getListOfAvailableBooks() {
+        return listOfAvailableBooks;
+    }
+
+    public void setListOfAvailableBooks(Map listOfAvailableBooks) {
+        this.listOfAvailableBooks = listOfAvailableBooks;
     }
 
 
