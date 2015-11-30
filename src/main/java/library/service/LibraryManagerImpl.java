@@ -1,15 +1,15 @@
 package library.service;
 
         import library.domain.Book;
-        import library.domain.Library;
-        import library.domain.Reader;
-        import library.exception.NullBookException;
-        import library.exception.NullReaderException;
-        import org.apache.log4j.Logger;
+import library.domain.Library;
+import library.domain.Reader;
+import library.exception.NullBookException;
+import library.exception.NullReaderException;
+import org.apache.log4j.Logger;
 
-        import java.util.Date;
-        import java.util.List;
-        import java.util.Map;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 public class LibraryManagerImpl implements LibraryManager {
     private Library library;
